@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html -->
+<html lang="en" data-content_root="../" data-mode="auto" data-theme="dark" class="fontawesome-i2svg-active fontawesome-i2svg-complete" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <style type="text/css">:host,:root{--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Solid";--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Regular";--fa-font-light:normal 300 1em/1 "Font Awesome 6 Light";--fa-font-thin:normal 100 1em/1 "Font Awesome 6 Thin";--fa-font-duotone:normal 900 1em/1 "Font Awesome 6 Duotone";--fa-font-sharp-solid:normal 900 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-regular:normal 400 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-light:normal 300 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-thin:normal 100 1em/1 "Font Awesome 6 Sharp";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands"}svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa{overflow:visible;box-sizing:content-box}.svg-inline--fa{display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-2xs{vertical-align:.1em}.svg-inline--fa.fa-xs{vertical-align:0}.svg-inline--fa.fa-sm{vertical-align:-.0714285705em}.svg-inline--fa.fa-lg{vertical-align:-.2em}.svg-inline--fa.fa-xl{vertical-align:-.25em}.svg-inline--fa.fa-2xl{vertical-align:-.3125em}.svg-inline--fa.fa-pull-left{margin-right:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-pull-right{margin-left:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-li{width:var(--fa-li-width,2em);top:.25em}.svg-inline--fa.fa-fw{width:var(--fa-fw-width,1.25em)}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:var(--fa-counter-background-color,#ff253a);border-radius:var(--fa-counter-border-radius,1em);box-sizing:border-box;color:var(--fa-inverse,#fff);line-height:var(--fa-counter-line-height,1);max-width:var(--fa-counter-max-width,5em);min-width:var(--fa-counter-min-width,1.5em);overflow:hidden;padding:var(--fa-counter-padding,.25em .5em);right:var(--fa-right,0);text-overflow:ellipsis;top:var(--fa-top,0);-webkit-transform:scale(var(--fa-counter-scale,.25));transform:scale(var(--fa-counter-scale,.25));-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:var(--fa-bottom,0);right:var(--fa-right,0);top:auto;-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:var(--fa-bottom,0);left:var(--fa-left,0);right:auto;top:auto;-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{top:var(--fa-top,0);right:var(--fa-right,0);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:var(--fa-left,0);right:auto;top:var(--fa-top,0);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:top left;transform-origin:top left}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-2xs{font-size:.625em;line-height:.1em;vertical-align:.225em}.fa-xs{font-size:.75em;line-height:.0833333337em;vertical-align:.125em}.fa-sm{font-size:.875em;line-height:.0714285718em;vertical-align:.0535714295em}.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}.fa-xl{font-size:1.5em;line-height:.0416666682em;vertical-align:-.125em}.fa-2xl{font-size:2em;line-height:.03125em;vertical-align:-.1875em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:var(--fa-li-margin,2.5em);padding-left:0}.fa-ul>li{position:relative}.fa-li{left:calc(var(--fa-li-width,2em) * -1);position:absolute;text-align:center;width:var(--fa-li-width,2em);line-height:inherit}.fa-border{border-color:var(--fa-border-color,#eee);border-radius:var(--fa-border-radius,.1em);border-style:var(--fa-border-style,solid);border-width:var(--fa-border-width,.08em);padding:var(--fa-border-padding,.2em .25em .15em)}.fa-pull-left{float:left;margin-right:var(--fa-pull-margin,.3em)}.fa-pull-right{float:right;margin-left:var(--fa-pull-margin,.3em)}.fa-beat{-webkit-animation-name:fa-beat;animation-name:fa-beat;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-bounce{-webkit-animation-name:fa-bounce;animation-name:fa-bounce;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1))}.fa-fade{-webkit-animation-name:fa-fade;animation-name:fa-fade;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-beat-fade{-webkit-animation-name:fa-beat-fade;animation-name:fa-beat-fade;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flip{-webkit-animation-name:fa-flip;animation-name:fa-flip;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-shake{-webkit-animation-name:fa-shake;animation-name:fa-shake;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,linear);animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin{-webkit-animation-name:fa-spin;animation-name:fa-spin;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,2s);animation-duration:var(--fa-animation-duration,2s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,linear);animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin-reverse{--fa-animation-direction:reverse}.fa-pulse,.fa-spin-pulse{-webkit-animation-name:fa-spin;animation-name:fa-spin;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,steps(8));animation-timing-function:var(--fa-animation-timing,steps(8))}@media (prefers-reduced-motion:reduce){.fa-beat,.fa-beat-fade,.fa-bounce,.fa-fade,.fa-flip,.fa-pulse,.fa-shake,.fa-spin,.fa-spin-pulse{-webkit-animation-delay:-1ms;animation-delay:-1ms;-webkit-animation-duration:1ms;animation-duration:1ms;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-transition-delay:0s;transition-delay:0s;-webkit-transition-duration:0s;transition-duration:0s}}@-webkit-keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@-webkit-keyframes fa-bounce{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}10%{-webkit-transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0);transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{-webkit-transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em));transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{-webkit-transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0);transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{-webkit-transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em));transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em))}64%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}}@keyframes fa-bounce{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}10%{-webkit-transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0);transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{-webkit-transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em));transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{-webkit-transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0);transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{-webkit-transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em));transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em))}64%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}}@-webkit-keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@-webkit-keyframes fa-beat-fade{0%,100%{opacity:var(--fa-beat-fade-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(var(--fa-beat-fade-scale,1.125));transform:scale(var(--fa-beat-fade-scale,1.125))}}@keyframes fa-beat-fade{0%,100%{opacity:var(--fa-beat-fade-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(var(--fa-beat-fade-scale,1.125));transform:scale(var(--fa-beat-fade-scale,1.125))}}@-webkit-keyframes fa-flip{50%{-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@keyframes fa-flip{50%{-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@-webkit-keyframes fa-shake{0%{-webkit-transform:rotate(-15deg);transform:rotate(-15deg)}4%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}24%,8%{-webkit-transform:rotate(-18deg);transform:rotate(-18deg)}12%,28%{-webkit-transform:rotate(18deg);transform:rotate(18deg)}16%{-webkit-transform:rotate(-22deg);transform:rotate(-22deg)}20%{-webkit-transform:rotate(22deg);transform:rotate(22deg)}32%{-webkit-transform:rotate(-12deg);transform:rotate(-12deg)}36%{-webkit-transform:rotate(12deg);transform:rotate(12deg)}100%,40%{-webkit-transform:rotate(0);transform:rotate(0)}}@keyframes fa-shake{0%{-webkit-transform:rotate(-15deg);transform:rotate(-15deg)}4%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}24%,8%{-webkit-transform:rotate(-18deg);transform:rotate(-18deg)}12%,28%{-webkit-transform:rotate(18deg);transform:rotate(18deg)}16%{-webkit-transform:rotate(-22deg);transform:rotate(-22deg)}20%{-webkit-transform:rotate(22deg);transform:rotate(22deg)}32%{-webkit-transform:rotate(-12deg);transform:rotate(-12deg)}36%{-webkit-transform:rotate(12deg);transform:rotate(12deg)}100%,40%{-webkit-transform:rotate(0);transform:rotate(0)}}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}.fa-rotate-by{-webkit-transform:rotate(var(--fa-rotate-angle,0));transform:rotate(var(--fa-rotate-angle,0))}.fa-stack{display:inline-block;vertical-align:middle;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;z-index:var(--fa-stack-z-index,auto)}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:var(--fa-inverse,#fff)}.fa-sr-only,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fa-sr-only-focusable:not(:focus),.sr-only-focusable:not(:focus){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fa-duotone.fa-inverse,.fad.fa-inverse{color:var(--fa-inverse,#fff)}</style><link href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/theme.css" rel="stylesheet">
+<link href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/bootstrap.css" rel="stylesheet">
+<link href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/pydata-sphinx-theme.css" rel="stylesheet">
+
+  
+  <link href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/all.min.css" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/pygments.css">
+    <link rel="stylesheet" type="text/css" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/sphinx-book-theme.css">
+    <link rel="stylesheet" type="text/css" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/copybutton.css">
+    <link rel="stylesheet" type="text/css" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/togglebutton.css">
+    <link rel="stylesheet" type="text/css" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/sphinx-design.min.css">
+    <link rel="stylesheet" type="text/css" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/content.css">
+    <link rel="stylesheet" type="text/css" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/breadcrumbs.css">
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/bootstrap.js.download">
+<link rel="preload" as="script" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/pydata-sphinx-theme.js.download">
+  <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/all.min.js.download"></script>
+
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/jquery.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/_sphinx_javascript_frameworks_compat.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/documentation_options.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/doctools.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/sphinx_highlight.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/clipboard.min.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/copybutton.js.download"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/togglebutton.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/sphinx-book-theme.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/design-tabs.js.download"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'FAQ/index';</script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/jquery.visible.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/jquery.leaveNotice-nist.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/applyLeaveNotice.js.download"></script>
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/smoothNavScroll.js.download"></script>
+    <link rel="icon" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/_static/favicon.svg">
+    <link rel="index" title="Index" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/genindex.html">
+    <link rel="search" title="Search" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/search.html">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="docsearch:language" content="en">
+
+    <link rel="stylesheet" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/nist-combined.css">
+    <link rel="stylesheet" type="text/css" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/jquery.leaveNotice.css">
+    <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/nist-header-footer.js.download" type="text/javascript" defer="defer"></script>
+    <script async="" src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/js"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RJSMY46M5C');
+    </script>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="" class=""><div id="nistheadergoeshere"><header class="nist-header" id="nist-header" role="banner">
+
+  <a href="https://www.nist.gov/" title="National Institute of Standards and Technology" class="nist-header__logo-link" rel="home">
+    <svg aria-hidden="true" class="nist-header__logo-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="32" viewBox="0 0 24 32">
+      <path d="M20.911 5.375l-9.482 9.482 9.482 9.482c0.446 0.446 0.446 1.161 0 1.607l-2.964 2.964c-0.446 0.446-1.161 0.446-1.607 0l-13.25-13.25c-0.446-0.446-0.446-1.161 0-1.607l13.25-13.25c0.446-0.446 1.161-0.446 1.607 0l2.964 2.964c0.446 0.446 0.446 1.161 0 1.607z"></path>
+    </svg>
+    <svg class="nist-header__logo-image" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-237 385.7 109.7 29.3">
+      <title>National Institute of Standards and Technology</title>
+      <g>
+        <path class="st0" d="M-231,415h-6v-23.1c0,0,0-4.4,4.4-5.8c4-1.3,6.6,1.3,6.6,1.3l19.7,21.3c1,0.6,1.4,0,1.4-0.6v-22h6.1V409
+          c0,1.9-1.6,4.4-4,5.3c-2.4,0.9-4.9,0.9-7.9-1.7l-18.5-20c-0.5-0.5-1.8-0.6-1.8,0.4L-231,415L-231,415z"></path>
+        <path class="st0" d="M-195,386.1h6.1v20.7c0,2.2,1.9,2.2,3.6,2.2h26.8c1.1,0,2.4-1.3,2.4-2.7c0-1.4-1.3-2.8-2.5-2.8H-176
+          c-3,0.1-9.2-2.7-9.2-8.5c0-7.1,5.9-8.8,8.6-9h49.4v6.1h-12.3V415h-6v-22.9h-30.2c-2.9-0.2-4.9,4.7-0.2,5.4h18.6
+          c2.8,0,7.4,2.4,7.5,8.4c0,6.1-3.6,9-7.5,9H-185c-4.5,0-6.2-1.1-7.8-2.5c-1.5-1.5-1.7-2.3-2.2-5.3L-195,386.1
+          C-194.9,386.1-195,386.1-195,386.1z"></path>
+      </g>
+    </svg>
+  </a>
+
+</header>
+</div>
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top" style="display: none;">
+    <svg class="svg-inline--fa fa-arrow-up" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path></svg><!-- <i class="fa-solid fa-arrow-up"></i> Font Awesome fontawesome.com -->Back to top</button>
+
+  
+  <input type="checkbox" class="sidebar-toggle" id="pst-primary-sidebar-checkbox">
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox" class="sidebar-toggle" id="pst-secondary-sidebar-checkbox">
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center" action="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/search.html" method="get">
+  <svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg><!-- <i class="fa-solid fa-magnifying-glass"></i> Font Awesome fontawesome.com -->
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer" style="height: auto;">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none noprint">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <svg class="svg-inline--fa fa-bars" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg><!-- <span class="fa-solid fa-bars"></span> Font Awesome fontawesome.com -->
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item"><link rel="stylesheet" href="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/font-awesome.min.css">
+<div style="width: max-content;">
+    <ul class="wy-breadcrumbs">
+        <li style="list-style: none;"><a href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#" aria-label="Home"><svg class="svg-inline--fa fa-house" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="house" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path></svg><!-- <i class="fa fa-home"></i> Font Awesome fontawesome.com --></a></li>
+        <li class="breadcrumb-item breadcrumb-active"> Frequently Asked Questions about Post-Quantum Cryptography</li>
+    </ul>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <svg class="svg-inline--fa fa-outdent" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="outdent" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64zM192 192c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32zm32 96H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32s14.3-32 32-32zM0 448c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM.2 268.6c-8.2-6.4-8.2-18.9 0-25.3l101.9-79.3c10.5-8.2 25.8-.7 25.8 12.6V335.3c0 13.3-15.3 20.8-25.8 12.6L.2 268.6z"></path></svg><!-- <span class="fa-solid fa-outdent"></span> Font Awesome fontawesome.com -->
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar noprint">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Migration to Post-Quantum Cryptography  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Main Project Page" data-bs-original-title="Main Project Page"><img src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/MainProjectLogo.jpg" class="icon-link-image" alt="Main Project Page"></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+   <button class="btn search-button-field search-button__button" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-original-title="Search">
+    <svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg><!-- <i class="fa-solid fa-magnifying-glass"></i> Font Awesome fontawesome.com -->
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ </div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#">
+                    Frequently Asked Questions about Post-Quantum Cryptography
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none noprint">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" aria-label="Toggle primary sidebar" data-bs-original-title="Toggle primary sidebar">
+  <svg class="svg-inline--fa fa-bars" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg><!-- <span class="fa-solid fa-bars"></span> Font Awesome fontawesome.com -->
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <svg class="svg-inline--fa fa-download" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg><!-- <i class="fas fa-download"></i> Font Awesome fontawesome.com -->
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+      
+      
+      
+      <li><a href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/_sources/FAQ/index.rst" target="_blank" class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" data-bs-original-title="Download source file">
+  
+
+<span class="btn__icon-container">
+  <svg class="svg-inline--fa fa-file" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"></path></svg><!-- <i class="fas fa-file"></i> Font Awesome fontawesome.com -->
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()" class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" data-bs-original-title="Print to PDF">
+  
+
+<span class="btn__icon-container">
+  <svg class="svg-inline--fa fa-file-pdf" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" aria-label="Fullscreen mode" data-bs-original-title="Fullscreen mode">
+  
+
+<span class="btn__icon-container">
+  <svg class="svg-inline--fa fa-expand" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="expand" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"></path></svg><!-- <i class="fas fa-expand"></i> Font Awesome fontawesome.com -->
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-original-title="light/dark">
+    <svg class="svg-inline--fa fa-sun theme-switch fa-lg" data-mode="light" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"></path></svg><!-- <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i> Font Awesome fontawesome.com -->
+    <svg class="svg-inline--fa fa-moon theme-switch fa-lg" data-mode="dark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg><!-- <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i> Font Awesome fontawesome.com -->
+    <svg class="svg-inline--fa fa-circle-half-stroke theme-switch fa-lg" data-mode="auto" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-half-stroke" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path></svg><!-- <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i> Font Awesome fontawesome.com -->
+  </button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-original-title="Search">
+    <svg class="svg-inline--fa fa-magnifying-glass fa-lg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg><!-- <i class="fa-solid fa-magnifying-glass fa-lg"></i> Font Awesome fontawesome.com -->
+  </button>
+
+<button class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" aria-label="Toggle secondary sidebar" data-bs-original-title="Toggle secondary sidebar">
+    <svg class="svg-inline--fa fa-list" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"></path></svg><!-- <span class="fa-solid fa-list"></span> Font Awesome fontawesome.com -->
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Frequently Asked Questions about Post-Quantum Cryptography</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-post-quantum-cryptography-pqc">What is Post-Quantum Cryptography (PQC)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-other-terms-used-to-describe-post-quantum-cryptography">What are some other terms used to describe post-quantum cryptography?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-readiness-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">What are some examples of the use of “quantum-readiness” to describe what is being achieved by migrating to post-quantum cryptography?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-resistant-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">What are some examples of the use of “quantum-resistant” to describe what is being achieved by migrating to post-quantum cryptography?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-safe-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">What are some examples of the use of “quantum-safe” to describe what is being achieved by migrating to post-quantum cryptography?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-an-example-of-the-use-of-quantum-secure-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">What is an example of the use of “quantum-secure” to describe what is being achieved by migrating to post-quantum cryptography?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#when-will-a-cryptanalytically-relevant-quantum-computer-exist">When will a cryptanalytically relevant quantum computer exist?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-timelines-for-activities-which-organizations-must-carry-out-to-migrate-to-post-quantum-cryptography-in-the-coming-years">What are some timelines for activities which organizations must carry out to migrate to post-quantum cryptography in the coming years?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-drivers-for-acting-to-migration-to-pqc">What are some examples of the drivers for acting to migration to PQC?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#where-can-you-start-your-migration-to-pqc">Where can you start your migration to PQC?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-cryptographic-agility">What is cryptographic agility?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-federal-information-processing-standards-fips">What are Federal Information Processing Standards (FIPS)?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-the-current-fips">What are the current FIPS?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-the-federal-information-processing-standards-fips-for-pqc">What are the Federal Information Processing Standards (FIPS) for PQC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#key-encapsulation-mechanism">Key Encapsulation Mechanism</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#digital-signatures">Digital Signatures</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#does-nist-have-validation-testing-of-approved-i-e-fips-approved-and-nist-recommended-cryptographic-algorithms-and-their-individual-components">Does NIST have validation testing of approved (i.e., FIPS-approved and NIST-recommended) cryptographic algorithms and their individual components?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#does-nist-have-a-security-metric-to-use-in-procuring-equipment-containing-validated-cryptographic-modules">Does NIST have a security metric to use in procuring equipment containing validated cryptographic modules?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#is-there-a-way-to-use-a-suite-of-automated-tools-that-would-permit-organizations-to-perform-testing-of-their-cryptographic-products-according-to-the-requirements-of-fips-140-3-then-directly-report-the-results-to-nist-using-appropriate-protocols">Is there a way to use a suite of automated tools that would permit organizations to perform testing of their cryptographic products according to the requirements of FIPS 140-3, then directly report the results to NIST using appropriate protocols?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-does-nist-guidance-say-about-transitioning-from-quantum-vulnerable-cryptographic-algorithms-to-post-quantum-digital-signature-algorithms-and-key-establishment-schemes">What does NIST guidance say about transitioning from quantum-vulnerable cryptographic algorithms to post-quantum digital signature algorithms and key-establishment schemes?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-u-s-government-policies-memorandums-and-standards-discuss-migration-to-pqc">What U.S. government policies, memorandums, and standards discuss migration to PQC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-additional-u-s-government-resources">What are some additional U.S. government resources?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-international-resources-perspectives-and-posts-regarding-pqc">What are some international resources, perspectives, and posts regarding PQC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-additional-international-resources">What are some additional international resources?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-sector-specific-pqc-resources">What are some Sector-Specific PQC Resources?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#financial-services-sector">Financial Services Sector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#information-technology-sector">Information Technology Sector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#telecom">Telecom</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-has-the-national-cybersecurity-center-of-excellence-nccoe-published-to-support-migration-from-the-current-set-of-public-key-cryptographic-algorithms-to-replacement-algorithms-that-are-resistant-to-quantum-computer-based-attacks">What has the National Cybersecurity Center of Excellence (NCCoE) published to support migration from the current set of public-key cryptographic algorithms to replacement algorithms that are resistant to quantum computer-based attacks?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-has-the-nccoe-published-regarding-interoperability-and-performance-testing-of-transport-layer-security">What has the NCCoE published regarding interoperability and performance testing of Transport Layer Security?</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="frequently-asked-questions-about-post-quantum-cryptography">
+<h1>Frequently Asked Questions about Post-Quantum Cryptography<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#frequently-asked-questions-about-post-quantum-cryptography" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page is supplementary material for the <a class="reference external" href="https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms">NIST Migration to Post-Quantum Cryptography Project</a></p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<p>This Frequently Asked Questions (FAQ) resource is designed to offer answers to questions about the need to secure electronic information with post-quantum cryptography.
+This FAQ is not an exhaustive list and will be updated periodically.
+Please send new questions for consideration to be added to this resource to <a class="reference external" href="mailto:applied-crypto-pqc%40nist.gov">mailto:applied-crypto-pqc<span>@</span>nist<span>.</span>gov</a>.</p>
+<p><strong>Last Updated:</strong> July 14, 2025</p>
+<section id="what-is-post-quantum-cryptography-pqc">
+<h2>What is Post-Quantum Cryptography (PQC)?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-post-quantum-cryptography-pqc" title="Link to this heading">#</a></h2>
+<p>Post-Quantum Cryptography (PQC) refers to cryptographic methods designed to resist attacks from both classical and quantum computers.
+As quantum computers advance, they could potentially break current encryption methods like RSA and elliptic curve cryptography (ECC), which rely on mathematical problems that are difficult for classical computers to solve.
+The aim of PQC is to develop encryption algorithms that remain secure against these emerging threats while still being compatible with existing systems and networks.</p>
+<p>The National Institute of Standards and Technology (NIST) is leading global efforts to standardize these quantum-resistant algorithms to ensure the security of digital communications in the quantum era.</p>
+<p><strong>Additional Resources:</strong> On NIST’s <a class="reference external" href="https://www.nist.gov/cybersecurity/what-post-quantum-cryptography">What Is Post-Quantum Cryptography?</a> webpage, you can learn more about the following:</p>
+<ul class="simple">
+<li><p>What is quantum computing?</p></li>
+<li><p>Why are quantum computers being developed if they can potentially cause so much harm?</p></li>
+<li><p>How does current cryptography work and how would a quantum computer crack it?</p></li>
+<li><p>Why do we need post-quantum encryption and how will PQC algorithms work?</p></li>
+<li><p>If cryptographically relevant quantum computers don’t exist yet, why is developing post-quantum encryption algorithms important now?</p></li>
+<li><p>What is “harvest now, decrypt later”?</p></li>
+<li><p>How did NIST design and select the algorithms it is standardizing?</p></li>
+<li><p>Why is NIST leading the effort to develop PQC standards?</p></li>
+<li><p>What can we be doing now to get ready for cryptanalytically relevant quantum computers?</p></li>
+</ul>
+</section>
+<section id="what-are-some-other-terms-used-to-describe-post-quantum-cryptography">
+<h2>What are some other terms used to describe post-quantum cryptography?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-other-terms-used-to-describe-post-quantum-cryptography" title="Link to this heading">#</a></h2>
+<p>With the growing attention on quantum computing as an emerging technology, compounding the term “quantum” with “readiness”, “resistant”. “safe”, or “secure” has become another way to convey what is being achieved in this cryptographic migration.</p>
+<section id="what-are-some-examples-of-the-use-of-quantum-readiness-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">
+<h3>What are some examples of the use of “quantum-readiness” to describe what is being achieved by migrating to post-quantum cryptography?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-readiness-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Canadian Forum for Digital Infrastructure Resilience (CFDIR), <a class="reference external" href="https://ised-isde.canada.ca/site/spectrum-management-telecommunications/sites/default/files/documents/Quantum-Readiness%20Best%20Practices%20-%20v04%20-%2010%20July%202024.pdf">Canadian National Quantum-Readiness Best Practices and Guidelines</a></p></li>
+<li><p>Cloud Security Alliance, <a class="reference external" href="https://cloudsecurityalliance.org/blog/2024/07/03/quantum-readiness-importance-a-comprehensive-guide">Quantum Readiness Importance: A Comprehensive Guide</a></p></li>
+<li><p>Deloitte, <a class="reference external" href="https://www.deloitte.com/global/en/services/consulting-risk/perspectives/enterprises-consider-practical-steps-toward-quantum-cyber-readiness.html">Quantum Cyber Readiness</a></p></li>
+<li><p>U.S. Cybersecurity and Infrastructure Security Agency (CISA), <a class="reference external" href="https://media.defense.gov/2023/Aug/21/2003284212/-1/-1/0/CSI-QUANTUM-READINESS.PDF">Quantum-Readiness: Migration to Post-Quantum Cryptography</a></p></li>
+</ul>
+</section>
+<section id="what-are-some-examples-of-the-use-of-quantum-resistant-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">
+<h3>What are some examples of the use of “quantum-resistant” to describe what is being achieved by migrating to post-quantum cryptography?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-resistant-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>NIST, <a class="reference external" href="https://www.nist.gov/news-events/news/2022/07/nist-announces-first-four-quantum-resistant-cryptographic-algorithms">NIST Announces First Four Quantum-Resistant Cryptographic Algorithms</a></p></li>
+<li><p>The National Cryptologic Foundation, <a class="reference external" href="https://cryptologicfoundation.org/community/conferences/convene/quantum-march-2024.html">Convening to Act: Quantum Resistant Cryptography (QRC) in Software</a></p></li>
+<li><p>Microsoft, <a class="reference external" href="https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsofts-quantum-resistant-cryptography-is-here/4238780">Microsoft’s quantum-resistant cryptography is here</a></p></li>
+<li><p>SSH, <a class="reference external" href="https://www.ssh.com/blog/ssh-in-the-world-of-post-quantum-cryptography">SSH in the World of Post-Quantum Cryptography (PQC)</a></p></li>
+<li><p>Technology Review, <a class="reference external" href="https://www.technologyreview.com/2022/09/14/1059400/explainer-quantum-resistant-algorithms/">What are quantum-resistant algorithms—and why do we need them?</a></p></li>
+</ul>
+</section>
+<section id="what-are-some-examples-of-the-use-of-quantum-safe-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">
+<h3>What are some examples of the use of “quantum-safe” to describe what is being achieved by migrating to post-quantum cryptography?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-safe-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>IBM, <a class="reference external" href="https://www.ibm.com/think/topics/quantum-safe-cryptography">What is quantum-safe cryptography?</a></p></li>
+<li><p>European Telecommunications Standards Institute (ESTI), <a class="reference external" href="https://www.etsi.org/technologies/quantum-safe-cryptography">Quantum-Safe Cryptography (QSC)</a></p></li>
+<li><p>Germany’s Federal Office for Information Security (BSI), <a class="reference external" href="https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/quantentechnologien-und-post-quanten-kryptografie_node.html">Quantum Technologies and Quantum-Safe Cryptography</a></p></li>
+</ul>
+</section>
+<section id="what-is-an-example-of-the-use-of-quantum-secure-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">
+<h3>What is an example of the use of “quantum-secure” to describe what is being achieved by migrating to post-quantum cryptography?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-an-example-of-the-use-of-quantum-secure-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>World Economic Forum, <a class="reference external" href="https://www.weforum.org/publications/quantum-readiness-toolkit-building-a-quantum-secure-economy/">Quantum Readiness Toolkit: Building a Quantum-Secure Economy</a></p></li>
+</ul>
+</section>
+</section>
+<section id="when-will-a-cryptanalytically-relevant-quantum-computer-exist">
+<h2>When will a cryptanalytically relevant quantum computer exist?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#when-will-a-cryptanalytically-relevant-quantum-computer-exist" title="Link to this heading">#</a></h2>
+<p>Estimates for the development of a cryptanalytically relevant quantum computer (CRQC) vary widely:</p>
+<ul class="simple">
+<li><p><strong>Near-term</strong>: Some believe that CRQCs may emerge by 2030, driven by rapid advancements.</p></li>
+<li><p><strong>Mid-term</strong>: Many anticipate they could become feasible within 15 to 20 years, requiring significant progress in scaling and error correction.</p></li>
+<li><p><strong>Long-term</strong>: Others believe it may take 30+ years due to the challenges of achieving fault-tolerant quantum systems.</p></li>
+</ul>
+<p>Despite uncertainty in when a CRQC will come into existence, experts agree on the importance of preparing for quantum threats now to secure cryptographic systems for the future.</p>
+<p><strong>Additional Resources:</strong> The following resources provide additional assessments of the state of development of current technologies for the realization of a CRQC:</p>
+<ul class="simple">
+<li><p>Germany’s Federal Office for Information Security (BSI), <a class="reference external" href="https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/Entwicklungsstand-Quantencomputer/entwicklungsstand-quantencomputer_node.html">The status of quantum computer development</a></p></li>
+<li><p>Global Risk Institute, <a class="reference external" href="https://globalriskinstitute.org/publication/2024-quantum-threat-timeline-report/">Quantum Threat Timeline Report 2024</a></p></li>
+<li><p>EvolutionQ, <a class="reference external" href="https://www.evolutionq.com/post/the-quantum-threat-timeline-why-organizations-must-act-now">The Quantum Threat Timeline: Why Organizations Must Act</a></p></li>
+<li><p>Cloud Security Alliance, <a class="reference external" href="https://cloudsecurityalliance.org/research/working-groups/quantum-safe-security">Quantum-safe Security</a></p></li>
+</ul>
+</section>
+<section id="what-are-some-timelines-for-activities-which-organizations-must-carry-out-to-migrate-to-post-quantum-cryptography-in-the-coming-years">
+<h2>What are some timelines for activities which organizations must carry out to migrate to post-quantum cryptography in the coming years?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-timelines-for-activities-which-organizations-must-carry-out-to-migrate-to-post-quantum-cryptography-in-the-coming-years" title="Link to this heading">#</a></h2>
+<p>The following resources give information related to timelines and milestones for migrating to PQC:</p>
+<ul class="simple">
+<li><p>NIST, <a class="reference external" href="https://csrc.nist.gov/pubs/ir/8547/ipd">IR 8547 (Initial Public Draft) Transition to Post-Quantum Cryptography Standards</a></p></li>
+<li><p>NSA, <a class="reference external" href="https://media.defense.gov/2022/Sep/07/2003071836/-1/-1/0/CSI_CNSA_2.0_FAQ_.PDF">The Commercial National Security Algorithm Suite 2.0 and Quantum Computing FAQ</a></p></li>
+<li><p>The United Kingdom’s National Cyber Security Center, <a class="reference external" href="https://www.ncsc.gov.uk/guidance/pqc-migration-timelines">Timelines for migration to post-quantum cryptography</a></p></li>
+<li><p>Canadian Centre for Cyber Security, <a class="reference external" href="https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001">Roadmap for the migration to post-quantum cryptography for the Govenrment of Canda (ITSM.40.001)</a></p></li>
+</ul>
+</section>
+<section id="what-are-some-examples-of-the-drivers-for-acting-to-migration-to-pqc">
+<h2>What are some examples of the drivers for acting to migration to PQC?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-drivers-for-acting-to-migration-to-pqc" title="Link to this heading">#</a></h2>
+<p>The following industry resources advocate the critical need to counter the threat to public key cryptography from a cryptanalytically relevant quantum computer:</p>
+<ul class="simple">
+<li><p>U.S. Cybersecurity and Infrastructure Security Agency (CISA), <a class="reference external" href="https://media.defense.gov/2023/Aug/21/2003284212/-1/-1/0/CSI-QUANTUM-READINESS.PDF">Quantum-Readiness: Migration to Post-Quantum Cryptography</a></p></li>
+<li><p>Cloud Security Alliance, <a class="reference external" href="https://cloudsecurityalliance.org/blog/2024/07/03/quantum-readiness-importance-a-comprehensive-guide">Quantum Readiness Importance: A Comprehensive Guide</a></p></li>
+<li><p>Deloitte, <a class="reference external" href="https://www.deloitte.com/content/dam/assets-shared/docs/services/consulting/2025/deloitte-cryptographic-resilience-community-profile-april-2025.pdf">Cryptographic Resilience: A Cyber Security Framework (CSF) 2.0 Community Profile</a></p></li>
+</ul>
+</section>
+<section id="where-can-you-start-your-migration-to-pqc">
+<h2>Where can you start your migration to PQC?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#where-can-you-start-your-migration-to-pqc" title="Link to this heading">#</a></h2>
+<p>A good place to start your migration to PQC is to perform cryptographic asset discovery and inventory on your systems.
+Knowing the extent, location, and use of the current cryptography that you have employed will allow you to understand what needs to be migrated.</p>
+<p><strong>Additional Resources:</strong> Some example publications go into further detail on how to perform migration:</p>
+<ul class="simple">
+<li><p>The Netherland’s General Intelligence and Security Service (AIVD), Centrum Wiskunde &amp; Informatica (CWI), and TNO, an independent not-for-profit research organisation, <a class="reference external" href="https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf,">The PQC Migration Handbook: Guidelines for Migrating to Post-Quantum Cryptography, Revised and Extended Second Edition, December 2024</a></p></li>
+<li><p>Canadian Forum for Digital Infrastructure Resilience (CFDIR), <a class="reference external" href="https://ised-isde.canada.ca/site/spectrum-management-telecommunications/sites/default/files/documents/Quantum-Readiness%20Best%20Practices%20-%20v04%20-%2010%20July%202024.pdf">Chapter Three of Canadian National Quantum-Readiness: Best Practices and Guidelines, version 04, July 2024</a></p></li>
+<li><p>European Telecommunications Standards Institute (ETSI),  <a class="reference external" href="https://www.etsi.org/deliver/etsi_tr/104000_104099/104016/01.01.01_60/tr_104016v010101p.pdf">TR 104 016 V1.1.1 – CYBER; Quantum-Safe Cryptography (QSC); A Repeatable Framework for Quantum-Safe Migrations</a></p></li>
+</ul>
+</section>
+<section id="what-is-cryptographic-agility">
+<h2>What is cryptographic agility?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-cryptographic-agility" title="Link to this heading">#</a></h2>
+<p>Migration to PQC brings a new focus on developing capabilities to replace crypto assets without disruption. The following are some crypto agility papers:</p>
+<ul class="simple">
+<li><p>DigiCert, <a class="reference external" href="https://www.digicert.com/faq/vulnerability-management/what-is-crypto-agility">What is crypto-agility?</a></p></li>
+<li><p>Financial Services Information Sharing and Analysis Center (FS-ISAC), <a class="reference external" href="https://www.fsisac.com/pqc-crypto-agility">Post Quantum Cryptography (PQC) Building Cryptographic Agility in the Financial Sector</a></p></li>
+<li><p>IBM, <a class="reference external" href="https://www.ibm.com/quantum/blog/crypto-agility">Crypto-agility and quantum-safe readiness</a></p></li>
+<li><p>InfoSec Global, <a class="reference external" href="https://cdn.prod.website-files.com/612fec6a451c71c9308f4b69/614b712e53ce8f7fad0c3c4a_ISG_AgilityUseCases_Whitepaper-FINAL.pdf">Cryptographic Agility in Practice</a></p></li>
+<li><p>NIST, <a class="reference external" href="https://csrc.nist.gov/pubs/cswp/39/considerations-for-achieving-cryptographic-agility/ipd">NIST Cybersecurity White Paper (CSWP 39), Considerations for Achieving Crypto Agility: Strategies and Practices (Initial Public Draft)</a> discusses approaches to achieve crypto agility while maintaining interoperability.</p></li>
+<li><p>PostQuantum, <a class="reference external" href="https://postquantum.com/post-quantum/introduction-crypto-agility/">Introduction to Crypto-Agility</a></p></li>
+<li><p>Alliance for Telecommunications Industry Solutions (ATIS), <a href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#id15"><span class="problematic" id="id16">`Strategic Framework for Crypto Agility and Quantum Risk Assessment&lt;https://atis.org/resources/strategic-framework-for-crypto-agility-and-quantum-risk-assessment/&gt;`_</span></a></p></li>
+</ul>
+</section>
+<section id="what-are-federal-information-processing-standards-fips">
+<h2>What are Federal Information Processing Standards (FIPS)?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-federal-information-processing-standards-fips" title="Link to this heading">#</a></h2>
+<p>FIPS are standards for federal computer systems that are developed by (NIST) and approved by the Secretary of Commerce in accordance with the Information Technology Management Reform Act of 1996 and Computer Security Act of 1987.
+These standards are developed when there are no acceptable industry standards or solutions for a particular government requirement.
+Although FIPS are developed for use by the Federal Government, many in the private sector voluntarily use these standards.</p>
+<section id="what-are-the-current-fips">
+<h3>What are the current FIPS?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-the-current-fips" title="Link to this heading">#</a></h3>
+<p>The list of current FIPS—those that have been published, plus draft FIPS posted for comment—can be found on NIST’s <a class="reference external" href="https://csrc.nist.gov/publications/fips">Computer Security Resource Center (CSRC)</a>.</p>
+</section>
+<section id="what-are-the-federal-information-processing-standards-fips-for-pqc">
+<h3>What are the Federal Information Processing Standards (FIPS) for PQC?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-the-federal-information-processing-standards-fips-for-pqc" title="Link to this heading">#</a></h3>
+<p><strong>There are currently three finalized Federal Information Processing Standards (FIPS) for Post-Quantum Cryptography:</strong></p>
+<ul class="simple">
+<li><p><strong>FIPS 203:</strong> <a class="reference external" href="https://csrc.nist.gov/pubs/fips/203/final">Module-Lattice-Based Key-Encapsulation Mechanism Standard</a></p></li>
+<li><p><strong>FIPS 204:</strong> <a class="reference external" href="https://csrc.nist.gov/pubs/fips/204/final">Module-Lattice-Based Digital Signature Standard</a></p></li>
+<li><p><strong>FIPS 205:</strong> <a class="reference external" href="https://csrc.nist.gov/pubs/fips/205/final">Stateless Hash-Based Digital Signature Standard</a></p></li>
+</ul>
+<p>These standards specify key establishment and digital signature schemes that are designed to resist future attacks by quantum computers, which threaten the security of current standards.
+The three algorithms specified in these standards are each derived from different submissions to the <a class="reference external" href="https://csrc.nist.gov/Projects/post-quantum-cryptography">NIST Post-Quantum Cryptography Standardization Project</a>.</p>
+<section id="key-encapsulation-mechanism">
+<h4>Key Encapsulation Mechanism<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#key-encapsulation-mechanism" title="Link to this heading">#</a></h4>
+<p>FIPS 203 specifies a cryptographic scheme called the Module-Lattice-Based Key-Encapsulation Mechanism Standard, which is derived from the CRYSTALS-KYBER submission.
+A key encapsulation mechanism (KEM) is a particular type of key establishment scheme that can be used to establish a shared secret key between two parties communicating over a public channel.</p>
+<p>Current NIST-approved key establishment schemes are specified in NIST Special Publications (SP):  <a class="reference external" href="https://csrc.nist.gov/pubs/sp/800/56/a/r3/final">SP 800-56A, Recommendation for Pair-Wise Key-Establishment Schemes Using Discrete Logarithm-Based Cryptography</a>, and <a class="reference external" href="https://csrc.nist.gov/pubs/sp/800/56/b/r2/final">SP 800-56B, Recommendation for Pair-Wise Key-Establishment Schemes Using Integer Factorization Cryptography</a>.</p>
+<p>NIST has also chosen Hamming Quasi-Cyclic (HQC) to be standardized.
+NIST will develop a standard based on HQC to augment its key-establishment portfolio.</p>
+</section>
+<section id="digital-signatures">
+<h4>Digital Signatures<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#digital-signatures" title="Link to this heading">#</a></h4>
+<p>FIPS 204 and 205 each specify digital signature schemes, which are used to detect unauthorized modifications to data and to authenticate the identity of the signatory.
+FIPS 204 specifies the Module-Lattice-Based Digital Signature Standard, which is derived from the CRYSTALS-Dilithium submission.
+FIPS 205 specifies the Stateless Hash-Based Digital Signature Standard, which is derived from the SPHINCS+ submission.</p>
+<p>Current NIST-approved digital signature schemes are specified in <a class="reference external" href="https://csrc.nist.gov/pubs/fips/186-5/final">FIPS 186-5, Digital Signature Standard</a>, and <a class="reference external" href="https://csrc.nist.gov/pubs/sp/800/208/final">SP 800-208, Recommendation for Stateful Hash-Based Signature Schemes</a>.</p>
+<p>NIST is also developing a FIPS that specifies a digital signature algorithm derived from FALCON as an additional alternative to these standards.</p>
+</section>
+</section>
+<section id="does-nist-have-validation-testing-of-approved-i-e-fips-approved-and-nist-recommended-cryptographic-algorithms-and-their-individual-components">
+<h3>Does NIST have validation testing of approved (i.e., FIPS-approved and NIST-recommended) cryptographic algorithms and their individual components?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#does-nist-have-validation-testing-of-approved-i-e-fips-approved-and-nist-recommended-cryptographic-algorithms-and-their-individual-components" title="Link to this heading">#</a></h3>
+<p>NIST’s <a class="reference external" href="https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program">Cryptographic Algorithm Validation Program (CAVP)</a> offers two Automated Cryptographic Validation Test Systems (ACVTS) for interested users to test cryptographic algorithm implementations.
+A Demo ACVTS server is available at no cost to interested parties. More information on accessing the ACVTS can be found the CAVP page on <a class="reference external" href="https://csrc.nist.gov/Projects/cryptographic-algorithm-validation-program/how-to-access-acvts">Accessing the ACVTS</a>.</p>
+<p>The Production ACVTS server is only available to National Voluntary Laboratory Accreditation Program (NVLAP) accredited testing laboratories, and is the only way to create algorithm validation certificates listed on the <a class="reference external" href="https://csrc.nist.gov/Projects/cryptographic-algorithm-validation-program/validation-search">Algorithm Validation Search Page</a>.
+The CAVP, through ACVTS, will generate test vectors to match the capabilities of a given implementation under test. The CAVP is not responsible for running those test vectors through the implementation.</p>
+<p>Example: <a class="reference external" href="https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/validation-search?searchMode=validation&amp;productType=-1&amp;algorithm=179&amp;ipp=25">CAVP List of Validated PQC Algorithms</a></p>
+</section>
+<section id="does-nist-have-a-security-metric-to-use-in-procuring-equipment-containing-validated-cryptographic-modules">
+<h3>Does NIST have a security metric to use in procuring equipment containing validated cryptographic modules?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#does-nist-have-a-security-metric-to-use-in-procuring-equipment-containing-validated-cryptographic-modules" title="Link to this heading">#</a></h3>
+<p>NIST’s <a class="reference external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program">Cryptographic Module Validation Program (CMVP)</a> aims to promote the use of validated cryptographic modules and provide Federal agencies with a security metric to use in procuring equipment containing validated cryptographic modules.</p>
+</section>
+<section id="is-there-a-way-to-use-a-suite-of-automated-tools-that-would-permit-organizations-to-perform-testing-of-their-cryptographic-products-according-to-the-requirements-of-fips-140-3-then-directly-report-the-results-to-nist-using-appropriate-protocols">
+<h3>Is there a way to use a suite of automated tools that would permit organizations to perform testing of their cryptographic products according to the requirements of FIPS 140-3, then directly report the results to NIST using appropriate protocols?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#is-there-a-way-to-use-a-suite-of-automated-tools-that-would-permit-organizations-to-perform-testing-of-their-cryptographic-products-according-to-the-requirements-of-fips-140-3-then-directly-report-the-results-to-nist-using-appropriate-protocols" title="Link to this heading">#</a></h3>
+<p>NIST’s NCCoE has an <a class="reference external" href="https://pages.nist.gov/ACMVPDocs/overview.html">Automation of the NIST Cryptographic Module Validation Project</a>.</p>
+</section>
+</section>
+<section id="what-does-nist-guidance-say-about-transitioning-from-quantum-vulnerable-cryptographic-algorithms-to-post-quantum-digital-signature-algorithms-and-key-establishment-schemes">
+<h2>What does NIST guidance say about transitioning from quantum-vulnerable cryptographic algorithms to post-quantum digital signature algorithms and key-establishment schemes?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-does-nist-guidance-say-about-transitioning-from-quantum-vulnerable-cryptographic-algorithms-to-post-quantum-digital-signature-algorithms-and-key-establishment-schemes" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://doi.org/10.6028/NIST.IR.8547.ipd">NIST IR 8547 (Initial Public Draft) Transition to Post-Quantum Cryptography Standards</a>
+identifies existing quantum-vulnerable cryptographic standards and the current quantum-resistant standards that will be used in the migration.
+This report should inform the efforts and timelines of federal agencies, industry, and standards organizations for migrating information technology products, services, and infrastructure to PQC.
+Comments received on this draft will be used to revise this transition plan and feed into other algorithm-specific and application-specific guidance for the transition to PQC.</p>
+<p>The following questions are addressed in NIST IR 8547:</p>
+<ul class="simple">
+<li><p>Where are the quantum-vulnerable algorithms in NIST’s existing cryptographic standards as well as the post-quantum algorithm standards that have been recently published?</p>
+<ul>
+<li><p>See section 2 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What are some migration considerations and use cases?</p>
+<ul>
+<li><p>See section 3 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What is the transition plan for quantum-vulnerable algorithms?</p>
+<ul>
+<li><p>See Section 4.1 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What are the post-quantum security categories?</p>
+<ul>
+<li><p>See Table 1 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What are the quantum-vulnerable digital signature algorithms?</p>
+<ul>
+<li><p>See Table 2 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What are the post-quantum digital signature algorithms?</p>
+<ul>
+<li><p>See Table 3 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What are the quantum-vulnerable key-establishment schemes?</p>
+<ul>
+<li><p>See Table 4 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What are the post-quantum key-establishment schemes?</p>
+<ul>
+<li><p>See Table 5 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What are security strength bit minimums for AES (FIPS 197)?</p>
+<ul>
+<li><p>See Table 6 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+<li><p>What are the collision security strength, collision security categories, preimage security strength, and preimage security categories for hash functions and eXtendable-Output Functions (XOFs)?</p>
+<ul>
+<li><p>See Table 7 of <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf">NIST IR 8457</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="what-u-s-government-policies-memorandums-and-standards-discuss-migration-to-pqc">
+<h2>What U.S. government policies, memorandums, and standards discuss migration to PQC?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-u-s-government-policies-memorandums-and-standards-discuss-migration-to-pqc" title="Link to this heading">#</a></h2>
+<p>The U.S. government’s approach to migrating to PQC is designed to safeguard national security and critical infrastructure against future quantum threats.</p>
+<p>The following bullets offer a timeline that illustrates the directives and resources which were established for use by federal agencies:</p>
+<ul class="simple">
+<li><p>January 2022, <a class="reference external" href="https://bidenwhitehouse.archives.gov/briefing-room/presidential-actions/2022/01/19/memorandum-on-improving-the-cybersecurity-of-national-security-department-of-defense-and-intelligence-community-systems/">National Security Memorandum-8 (NSM-8)</a></p>
+<ul>
+<li><p>NSM-8 provides guidance for National Security System (NSS) and related assets that outlines updating the Commercial National Security Algorithm (CNSA) to include quantum-resistant protocols, additional protections for data, migration efforts, and reporting requirements.</p></li>
+</ul>
+</li>
+<li><p>May 2022, <a class="reference external" href="https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2022/05/04/national-security-memorandum-on-promoting-united-states-leadership-in-quantum-computing-while-mitigating-risks-to-vulnerable-cryptographic-systems/">National Security Memorandum-10 (NSM-10)</a></p>
+<ul>
+<li><p>NSM-10 provides guidance for non-NSS and related assets which outlines the creation of cryptographic migration efforts with NIST NCCoE, the Federal Civilian Executive Branch (FCEB) annual cryptographic inventory of High Value Assets and High Impact Systems reported to CISA, migration efforts and reporting away from Cryptanalytically Relevant Quantum Computer (CRQC) vulnerable cryptography.</p></li>
+</ul>
+</li>
+<li><p>September 2022, <a class="reference external" href="https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3148990/nsa-releases-future-quantum-resistant-qr-algorithm-requirements-for-national-se/">Announcing the Commercial National Security Algorithm Suite 2.0 (CNSA 2.0)</a></p>
+<ul>
+<li><p>Release of CNSA 2.0 provides guidance for quantum-resistant algorithms (QRAs), timelines, and additional guidance sources for NSS and related assets. FAQ page was updated Dec 2024.</p></li>
+</ul>
+</li>
+<li><p>November 2022, <a class="reference external" href="https://www.whitehouse.gov/wp-content/uploads/2022/11/M-23-02-M-Memo-on-Migrating-to-Post-Quantum-Cryptography.pdf">Office of Management and Budget M-23-02</a></p>
+<ul>
+<li><p>M-23-02 provides direction for agencies to comply with NSM-10 and further defines what systems/assets and associated information to include in inventories. NIST will establish a mechanism to enable the exchange of PQC testing information and best practices. That mechanism is the <a class="reference external" href="https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms">NCCoE Migration to PQC project</a>.</p></li>
+</ul>
+</li>
+<li><p>December 2022, <a class="reference external" href="https://www.congress.gov/117/plaws/publ260/PLAW-117publ260.pdf">Quantum Computing Cybersecurity Preparedness Act 6 U.S.C. § 1526</a></p>
+<ul>
+<li><p>The Quantum Computer Cybersecurity Preparedness Act reaffirms NSM-10 and M-23-02. It includes requirements for inventory of cryptographic systems, migration to PQC, and reporting in alignment with prior PQC memorandums.</p></li>
+</ul>
+</li>
+<li><p>August 2024, <a class="reference external" href="https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved">The Secretary of Commerce approved three Federal Information Processing Standards (FIPS) for post-quantum cryptography</a></p>
+<ul>
+<li><p><a class="reference external" href="https://csrc.nist.gov/pubs/fips/203/final">FIPS 203: ML-KEM (Module-Lattice-Based Key-Encapsulation Mechanism Standard)</a></p></li>
+<li><p><a class="reference external" href="https://csrc.nist.gov/pubs/fips/204/final">FIPS 204: ML-DSA (Module-Lattice-Based Digital Signature Standard)</a></p></li>
+<li><p><a class="reference external" href="https://csrc.nist.gov/pubs/fips/205/final">FIPS 205: SLH-DSA (Stateless Hash-Based Digital Signature Standard)</a></p></li>
+</ul>
+</li>
+<li><p>October 2024, <a class="reference external" href="https://csrc.nist.gov/News/2024/pqc-digital-signature-second-round-announcement">NIST Announces 14 Candidates to Advance to the Second Round of the Additional Digital Signatures for the Post-Quantum Cryptography Standardization Process</a></p></li>
+<li><p>November 2024, <a class="reference external" href="https://csrc.nist.gov/news/2024/draft-nist-ir-8547-is-available-for-comment">Transition to Post-Quantum Cryptography Standards | Draft NIST IR 8547 is Available for Comment</a></p></li>
+<li><p>December 2024, <em>Updated</em> <a class="reference external" href="https://media.defense.gov/2022/Sep/07/2003071836/-1/-1/1/CSI_CNSA_2.0_FAQ_.PDF">The Commercial National Security Algorithm Suite 2.0 and Quantum Computing FAQ</a></p></li>
+<li><p>March 2025, <a class="reference external" href="https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption">NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption</a></p></li>
+</ul>
+<section id="what-are-some-additional-u-s-government-resources">
+<h3>What are some additional U.S. government resources?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-additional-u-s-government-resources" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Cybersecurity and Infrastructure Security Agency (CISA), <a class="reference external" href="https://www.cisa.gov/quantum">Post-Quantum Cryptography Initiative</a></p></li>
+<li><p>Department of Homeland Security (DHS), <a class="reference external" href="https://www.dhs.gov/quantum">Post-Quantum Cryptography</a></p></li>
+<li><p>Homeland Security Operational Analysis Center (HSOAC), <a class="reference external" href="https://www.rand.org/pubs/research_reports/RRA1367-6.html">Preparing for Post-Quantum Critical Infrastructure: Assessments of Quantum Computing Vulnerabilities of National Critical Functions</a></p></li>
+<li><p>FedRAMP, <a class="reference external" href="https://www.fedramp.gov/rev5/fips/">Policy for Cryptographic Module Selection and Use</a></p></li>
+<li><p>General Services Administration (GSA), <a class="reference external" href="https://www.fedramp.gov/rev5/fips/">Post Quantum Cryptography Buyer’s Guide</a></p></li>
+</ul>
+</section>
+</section>
+<section id="what-are-some-international-resources-perspectives-and-posts-regarding-pqc">
+<h2>What are some international resources, perspectives, and posts regarding PQC?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-international-resources-perspectives-and-posts-regarding-pqc" title="Link to this heading">#</a></h2>
+<p>The following documents represent a timeline view of international perspectives regarding considerations for the transition to PQC.</p>
+<ul class="simple">
+<li><p>July 2020, European Telecommunications Standards Institute (ETSI), <a class="reference external" href="https://www.etsi.org/deliver/etsi_tr/103600_103699/103619/01.01.01_60/tr_103619v010101p.pdf">TR 103 619 - V1.1.1 - CYBER; Migration strategies and recommendations to Quantum Safe schemes</a></p></li>
+<li><p>May 2021, European Union Agency for Cybersecurity (ENISA), <a class="reference external" href="https://www.enisa.europa.eu/publications/post-quantum-cryptography-current-state-and-quantum-mitigation">Post-Quantum Cryptography: Current state and quantum mitigation</a></p></li>
+<li><p>April 2021, The International Telecommunication Union (ITU), <a class="reference external" href="https://www.itu.int/rec/T-REC-X.1811-202104-I">X.1811: Security guidelines for applying quantum-safe algorithms in IMT-2020 systems</a></p></li>
+<li><p>October 2022, ENISA, <a class="reference external" href="https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study">Post-Quantum Cryptography - Integration study</a></p></li>
+<li><p>October 2022, ENISA, <a class="reference external" href="https://www.enisa.europa.eu/news/enisa-news/post-quantum-cryptography-anticipating-threats-and-preparing-the-future">Post-Quantum Cryptography: Anticipating Threats and Preparing the Future</a></p></li>
+<li><p>February 2023, Global Systems for Mobile communications Association (GSMA), <a class="reference external" href="https://www.gsma.com/newsroom/wp-content/uploads/PQ.1-Post-Quantum-Telco-Network-Impact-Assessment-Whitepaper-Version1.0.pdf">Post Quantum Telco Network Impact Assessment Whitepaper, Version 1.0</a></p></li>
+<li><p>March 2023, Financial Services Information Sharing and Analysis Center (FS-ISAC), <a class="reference external" href="https://www.fsisac.com/hubfs/Knowledge/PQC/PreparingForAPostQuantumWorldByManagingCryptographicRisk.pdf">Preparing for a Post-Quantum World by Managing Cryptographic Risk</a></p></li>
+<li><p>March 2023, The Netherland’s General Intelligence and Security Service (AIVD), Centrum Wiskunde &amp; Informatica (CWI), and TNO, an independent not-for-profit research organisation, <a class="reference external" href="https://publications.tno.nl/publication/34641918/oicFLj/attema-2023-pqc.pdf">The PQC Migration Handbook</a></p></li>
+<li><p>May 2023, ETSI, <a class="reference external" href="https://www.etsi.org/deliver/etsi_tr/103900_103999/103949/01.01.01_60/tr_103949v010101p.pdf">TR 103 949 - V1.1.1 - Quantum-Safe Cryptography (QSC) Migration; ITS and C-ITS migration study</a></p></li>
+<li><p>August 2023, International Organization for Standardization/International Electrotechnical Commission (ISO/IEC), <a class="reference external" href="https://www.iso.org/standard/77097.html">ISO/IEC 23837-1:2023 - Information security — Security requirements, test and evaluation methods for quantum key distribution — Part 1: Requirements</a></p></li>
+<li><p>September 2023, GSMA, <a class="reference external" href="https://www.gsma.com/get-involved/working-groups/wp-content/uploads/2023/09/Guidelines-for-Quantum-Risk-Management-for-Telco-v1.0.pdf">Guidelines for Quantum Risk Management for Telco, Version 1.0</a></p></li>
+<li><p>March 2024, Internet Engineering Task Force (IETF), <a class="reference external" href="https://datatracker.ietf.org/doc/draft-reddy-uta-pqc-app/">Post-Quantum Cryptography Recommendations for TLS-based Applications</a></p></li>
+<li><p>August 2024, The United Kingdom’s National Cyber Security Centre (NCSC), <a class="reference external" href="https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography">Next steps in preparing for post-quantum cryptography</a></p></li>
+<li><p>October 2024, Germany’s Federal Office for Information Security (BSI), <a class="reference external" href="https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/PQC-joint-statement.pdf?__blob=publicationFile&amp;v=3">Securing Tomorrow, Today: Transitioning to Post-Quantum Cryptography</a></p></li>
+<li><p>October 2024, ETSI, <a class="reference external" href="https://www.etsi.org/deliver/etsi_tr/104000_104099/104016/01.01.01_60/tr_104016v010101p.pdf">CYBER; Quantum-Safe Cryptography (QSC); A Repeatable Framework for Quantum-Safe Migrations</a></p></li>
+<li><p>March 2025, ETSI, <a class="reference external" href="https://www.etsi.org/newsroom/press-releases/2513-etsi-launches-new-standard-for-quantum-safe-hybrid-key-exchanges-to-secure-future-post-quantum-encryption">ETSI launches new standard for Quantum-Safe Hybrid Key Exchanges to secure future post-quantum encryption</a></p></li>
+<li><p>June 2025, European Union, Network and Information Systems Cooperation Group, <a class="reference external" href="https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography">A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography - Part 1, Version: 1.1, EU PQC Workstream</a></p></li>
+<li><p>June 2025, Canadian Centre for Cyber Security, <a class="reference external" href="https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001">Roadmap for the migration to post-quantum cryptography for the Govenrment of Canda (ITSM.40.001)</a></p></li>
+</ul>
+<section id="what-are-some-additional-international-resources">
+<h3>What are some additional international resources?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-additional-international-resources" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>GSMA, <a class="reference external" href="https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/">Post Quantum Government Initiatives by Country and Region</a> provides a summary of the existing government and region PQC guidelines (last updated March 2025).</p></li>
+</ul>
+</section>
+</section>
+<section id="what-are-some-sector-specific-pqc-resources">
+<h2>What are some Sector-Specific PQC Resources?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-sector-specific-pqc-resources" title="Link to this heading">#</a></h2>
+<section id="financial-services-sector">
+<h3>Financial Services Sector<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#financial-services-sector" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Financial Services Information Sharing and Analysis Center (FS-ISAC), <a class="reference external" href="https://www.fsisac.com/knowledge/pqc">Post Quantum Cryptography Resources</a></p></li>
+<li><p>X9, <a class="reference external" href="https://x9.org/x9-launches-effort-to-create-post-quantum-cryptography-assessment-guidelines-participants-sought/">Effort to Create Post-Quantum Cryptography Assessment Guidelines</a></p></li>
+</ul>
+</section>
+<section id="information-technology-sector">
+<h3>Information Technology Sector<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#information-technology-sector" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Microsoft, <a class="reference external" href="https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsofts-quantum-resistant-cryptography-is-here/4238780">Microsoft’s Quantum-resistant cryptography is here</a></p></li>
+<li><p>Google, <a class="reference external" href="https://cloud.google.com/blog/products/identity-security/announcing-quantum-safe-digital-signatures-in-cloud-kms">Announcing quantum-safe digital signatures in Cloud KMS</a></p></li>
+<li><p>Cloudflare, <a class="reference external" href="https://www.cloudflare.com/press-releases/2025/cloudflare-advances-industrys-first-cloud-native-quantum-safe-zero-trust/">Cloudflare Advances Industry’s First Cloud-Native Quantum-Safe Zero Trust Solution</a></p></li>
+<li><p>Bouncy Castle, <a class="reference external" href="https://downloads.bouncycastle.org/csharp/docs/PQC-Almanac.pdf">A PQC Almanac</a></p></li>
+</ul>
+</section>
+<section id="telecom">
+<h3>Telecom<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#telecom" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Global Systems for Mobile communications Association (GSMA), <a class="reference external" href="https://www.gsma.com/newsroom/gsma_resources/pq-03-post-quantum-cryptography-guidelines-for-telecom-use-cases/">PQ.03 Post Quantum Cryptography – Guidelines for Telecom Use Cases v2.0</a></p></li>
+<li><p>Alliance for Telecommunications Industry Solutions (ATIS), <a class="reference external" href="https://cdn.atis.org/atis.org/2025/02/25152429/Preparing-5G-for-the-Quantum-Era-WP-V9.pdf">Preparing 5G for the Quantum Era: An Analysis of 3GPP Architecture and the Transition to Quantum-Resistant Cryptography</a></p></li>
+</ul>
+</section>
+</section>
+<section id="what-has-the-national-cybersecurity-center-of-excellence-nccoe-published-to-support-migration-from-the-current-set-of-public-key-cryptographic-algorithms-to-replacement-algorithms-that-are-resistant-to-quantum-computer-based-attacks">
+<h2>What has the National Cybersecurity Center of Excellence (NCCoE) published to support migration from the current set of public-key cryptographic algorithms to replacement algorithms that are resistant to quantum computer-based attacks?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-has-the-national-cybersecurity-center-of-excellence-nccoe-published-to-support-migration-from-the-current-set-of-public-key-cryptographic-algorithms-to-replacement-algorithms-that-are-resistant-to-quantum-computer-based-attacks" title="Link to this heading">#</a></h2>
+<section id="what-has-the-nccoe-published-regarding-interoperability-and-performance-testing-of-transport-layer-security">
+<h3>What has the NCCoE published regarding interoperability and performance testing of Transport Layer Security?<a class="headerlink" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-has-the-nccoe-published-regarding-interoperability-and-performance-testing-of-transport-layer-security" title="Link to this heading">#</a></h3>
+<p>The Transport Layer Security (TLS) protocol is arguably the most deployed online security protocol, so it is critical to make sure it supports post-quantum protection.
+Moreover, its wide use makes it a prime target for harvest-now-decrypt-later attacks.
+It is therefore no surprise that TLS has been one of the first protocols on which PQC was prototyped.</p>
+<p>See Section 6 “Transport Layer Security” in the <a class="reference external" href="https://www.nccoe.nist.gov/sites/default/files/2023-12/pqc-migration-nist-sp-1800-38c-preliminary-draft.pdf">Preliminary Draft NIST SPECIAL PUBLICATION 1800-38C Migration to Post-Quantum Cryptography Quantum Readiness: Testing Draft Standards</a> to see interoperability and performance results performed before December 2023 using the draft PQC KEM standards.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc noprint"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <svg class="svg-inline--fa fa-list" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"></path></svg><!-- <i class="fa-solid fa-list"></i> Font Awesome fontawesome.com --> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry active"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-post-quantum-cryptography-pqc">What is Post-Quantum Cryptography (PQC)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-other-terms-used-to-describe-post-quantum-cryptography">What are some other terms used to describe post-quantum cryptography?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-readiness-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">What are some examples of the use of “quantum-readiness” to describe what is being achieved by migrating to post-quantum cryptography?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-resistant-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">What are some examples of the use of “quantum-resistant” to describe what is being achieved by migrating to post-quantum cryptography?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-use-of-quantum-safe-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">What are some examples of the use of “quantum-safe” to describe what is being achieved by migrating to post-quantum cryptography?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-an-example-of-the-use-of-quantum-secure-to-describe-what-is-being-achieved-by-migrating-to-post-quantum-cryptography">What is an example of the use of “quantum-secure” to describe what is being achieved by migrating to post-quantum cryptography?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#when-will-a-cryptanalytically-relevant-quantum-computer-exist">When will a cryptanalytically relevant quantum computer exist?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-timelines-for-activities-which-organizations-must-carry-out-to-migrate-to-post-quantum-cryptography-in-the-coming-years">What are some timelines for activities which organizations must carry out to migrate to post-quantum cryptography in the coming years?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-examples-of-the-drivers-for-acting-to-migration-to-pqc">What are some examples of the drivers for acting to migration to PQC?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#where-can-you-start-your-migration-to-pqc">Where can you start your migration to PQC?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-is-cryptographic-agility">What is cryptographic agility?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-federal-information-processing-standards-fips">What are Federal Information Processing Standards (FIPS)?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-the-current-fips">What are the current FIPS?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-the-federal-information-processing-standards-fips-for-pqc">What are the Federal Information Processing Standards (FIPS) for PQC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#key-encapsulation-mechanism">Key Encapsulation Mechanism</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#digital-signatures">Digital Signatures</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#does-nist-have-validation-testing-of-approved-i-e-fips-approved-and-nist-recommended-cryptographic-algorithms-and-their-individual-components">Does NIST have validation testing of approved (i.e., FIPS-approved and NIST-recommended) cryptographic algorithms and their individual components?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#does-nist-have-a-security-metric-to-use-in-procuring-equipment-containing-validated-cryptographic-modules">Does NIST have a security metric to use in procuring equipment containing validated cryptographic modules?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#is-there-a-way-to-use-a-suite-of-automated-tools-that-would-permit-organizations-to-perform-testing-of-their-cryptographic-products-according-to-the-requirements-of-fips-140-3-then-directly-report-the-results-to-nist-using-appropriate-protocols">Is there a way to use a suite of automated tools that would permit organizations to perform testing of their cryptographic products according to the requirements of FIPS 140-3, then directly report the results to NIST using appropriate protocols?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-does-nist-guidance-say-about-transitioning-from-quantum-vulnerable-cryptographic-algorithms-to-post-quantum-digital-signature-algorithms-and-key-establishment-schemes">What does NIST guidance say about transitioning from quantum-vulnerable cryptographic algorithms to post-quantum digital signature algorithms and key-establishment schemes?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-u-s-government-policies-memorandums-and-standards-discuss-migration-to-pqc">What U.S. government policies, memorandums, and standards discuss migration to PQC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-additional-u-s-government-resources">What are some additional U.S. government resources?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-international-resources-perspectives-and-posts-regarding-pqc">What are some international resources, perspectives, and posts regarding PQC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-additional-international-resources">What are some additional international resources?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-are-some-sector-specific-pqc-resources">What are some Sector-Specific PQC Resources?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#financial-services-sector">Financial Services Sector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#information-technology-sector">Information Technology Sector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#telecom">Telecom</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-has-the-national-cybersecurity-center-of-excellence-nccoe-published-to-support-migration-from-the-current-set-of-public-key-cryptographic-algorithms-to-replacement-algorithms-that-are-resistant-to-quantum-computer-based-attacks">What has the National Cybersecurity Center of Excellence (NCCoE) published to support migration from the current set of public-key cryptographic algorithms to replacement algorithms that are resistant to quantum computer-based attacks?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html#what-has-the-nccoe-published-regarding-interoperability-and-performance-testing-of-transport-layer-security">What has the NCCoE published regarding interoperability and performance testing of Transport Layer Security?</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content noprint">
+            
+<p>
+  
+    By NIST<br>
+  
+</p>
+
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/bootstrap.js.download"></script>
+<script src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/pydata-sphinx-theme.js.download"></script>
+<footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        </p><div class="disclaimer">
+          <strong>Disclaimer:</strong> Certain commercial equipment, instruments, or
+          materials are identified in this documentation to foster understanding. Such
+          identification does not imply recommendation or endorsement by the National
+          Institute of Standards and Technology, nor does it imply that the materials
+          or equipment identified are necessarily the best available for the purpose.
+        </div>
+      <p></p>
+    </div>
+</footer>
+  <script defer="" src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;96b7707dbbaf75cd&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.7.0&quot;,&quot;token&quot;:&quot;9ef5b487afff42a68917b2d63593a474&quot;}" crossorigin="anonymous"></script>
+
+<div id="nistfootergoeshere"><footer class="nist-footer">
+  <div class="nist-footer__inner">
+    <div class="nist-footer__menu" role="navigation">
+      <ul>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.nist.gov/privacy-policy">Site Privacy</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.nist.gov/oism/accessibility">Accessibility</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.nist.gov/privacy">Privacy Program</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.nist.gov/oism/copyrights">Copyrights</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.nist.gov/foia">FOIA</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a>
+        </li>
+        <li class="nist-footer__menu-item ">
+          <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a>
+        </li>
+        <li class="nist-footer__menu-item ">
+          <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.commerce.gov/">Commerce.gov</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.science.gov/">Science.gov</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://www.usa.gov/">USA.gov</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a href="https://vote.gov/">Vote.gov</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="nist-footer__logo">
+    <a href="https://www.nist.gov/" title="National Institute of Standards and Technology" class="nist-footer__logo-link" rel="home">
+      <img src="./Frequently Asked Questions about Post-Quantum Cryptography — Migration to Post-Quantum Cryptography documentation_files/nist_logo_brand_white.svg" alt="National Institute of Standards and Technology logo">
+    </a>
+  </div>
+</footer>
+</div></body></html>

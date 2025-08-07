@@ -1,0 +1,35 @@
+# Transition and Migration
+Is it possible for a hybrid key-establishment mode to be performed in a FIPS 140 approved mode of operation? (updated 11/18/2024)
+
+A hybrid key-establishment mode is defined here to be a key establishment scheme that is a combination of two or more components that are themselves cryptographic key-establishment schemes. The hybrid key-establishment scheme becomes a composite of these component schemes.  
+
+NIST currently allows a generic composite key-establishment technique described in SP 800-56C. Assume that the value Z is a shared secret that was generated as specified by SP 800-56A or 800-56B and that a shared secret T is generated or distributed through other schemes. The value Z’=Z||T may then be treated as a shared secret and any of the key derivation methods given in SP 800-56C may be applied to Z’ to derive secret keying material. 
+
+NIST intends to update SP 800-56C so that the value Z may be generated as specified by any current and future NIST key-establishment standards. This will include SP 800-56A, SP 800-56B, FIPS 203, and any additional post-quantum key-establishment standards. The desired property of hybrid techniques is that derived keys remain secure if at least one of the component schemes is secure. Security properties can be complex, and for composite key establishment schemes they will need to be analyzed on a case-by-case basis with the requirements of the application in mind. NIST intends to offer guidance on various key combiners in the forthcoming SP 800-227, Recommendations for Key Encapsulation Mechanisms.  
+
+Additionally, the output of the key-establishment scheme specified in FIPS 203 is a shared secret key which is a shared secret that does not require further key derivation. NIST emphasizes that any shared secret key generated as specified in FIPS 203 may be used as the value Z in the generic composite mode described in SP 800-56C. These same properties will apply to any future FIPS which standardize KEMs. 
+
+NIST leaves the decision to each specific application as to whether it can afford the implementation cost, performance reduction, and engineering complexity (including proper and independent security reviews) of a hybrid mode for key establishment. To assist external parties that desire such a mechanism, NIST will accommodate the use of a hybrid key-establishment mode in FIPS 140 validation when suitably combined with a NIST-approved scheme. 
+
+## Is it possible for dual signature generation or verification to be performed in a FIPS 140 approved mode of operation? (updated 11/18/24)
+
+Common techniques for hybrid digital signatures involve the use of dual signatures, which consist of two or more signatures on a common message. It may also be known as a hybrid signature or composite signature. The verification of the dual signature requires all of the component signatures to be successfully verified, such as by creating a single logical composite signature from two or more component signature algorithms. 
+
+Dual signatures could be used to sign user data (e.g., a document or e-mail) or digital certificates that contain references to user key pairs within a PKI. Existing NIST standards and guidelines accommodate their use provided that at least one component digital signature algorithm is NIST-approved. 
+
+NIST leaves the decision to each specific application as to whether it can afford the implementation cost, performance reduction, and engineering complexity (including proper and independent security reviews) with the use of dual signatures. To assist external parties that desire such a mechanism, NIST will accommodate the use of dual signatures in FIPS 140 validation when suitably combined with a NIST-approved scheme. 
+
+## Does NIST consider the hybrid key establishment modes and dual signatures to be long-term solutions? (added 1/28/20)
+
+NIST leaves the decision to each specific application as to whether it can afford the implementation cost, performance reduction, and engineering complexity (including proper and independent security review) of a hybrid mode for key establishment or the use of dual signatures. Future experience will help to decide on whether they can be a useful long-term solution. To assist external parties who desire such a mechanism, NIST will accommodate the use of a hybrid key-establishment mode and dual signatures in FIPS 140 validation when suitably combined with a NIST-approved scheme.
+
+## To protect against the threat of quantum computers, should we double the key length for AES now? (added 11/18/18)
+Grover’s algorithm allows a quantum computer to perform a brute force key search using quadratically fewer steps than would be required classically. Taken at face value, this suggests that an attacker with access to a quantum computer might be able to attack a symmetric cipher with a key up to twice as long as could be attacked by an attacker with access only to classical computers. However there are a number of mitigating factors suggesting that Grover’s algorithm will not speed up brute force key search as dramatically as one might suspect from this result. First of all, quantum computing hardware will likely be more expensive to build and use than classical hardware. Additionally, it was proven by Zalka in 1997 that in order to obtain the full quadratic speedup, all the steps of Grover’s algorithm must be performed in series. In the real world, where attacks on cryptography use massively parallel processing, the advantage of Grover’s algorithm will be smaller.
+
+Taking these mitigating factors into account, it is quite likely that Grover’s algorithm will provide little or no advantage in attacking AES, and AES 128 will remain secure for decades to come. Furthermore, even if quantum computers turn out to be much less expensive than anticipated, the known difficulty of parallelizing Grover’s algorithm suggests that both AES 192 and AES 256 will still be safe for a very long time. This of course assumes that no new cryptographic weaknesses, either with respect to classical or quantum cryptanalysis, are found in AES.
+
+Based on such understanding, current applications can continue to use AES with key sizes 128, 192, or 256 bits. NIST will issue guidance regarding any transitions of symmetric key algorithms and hash functions to protect against threats from quantum computers when we can foresee a transition need. Until then, users should follow the recommendations and guidelines NIST has already issued. In particular, anything with less than 112 bits of classical security should not be used.
+
+## Does NIST have any additional information regarding Migration?
+The National Cybersecurity Center of Excellence (NCCoE) Migration to PQC project has additional Frequently Asked Questions (FAQs) at: 
+https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/FAQ/index.html
